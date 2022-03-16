@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Install Mac Apps                                                            #
+###############################################################################
+
+{{ $mas_packages := dict
+  "497799835"    "xcode" 
+  "409183694"    "keynote" 
+  "409203825"    "numbers" 
+  "409201541"    "pages" 
+  "462058435"    "excel" 
+  "462062816"    "powerpoint" 
+}}
+
+source ~/.local/share/chezmoi/helpers/echos.sh
+source ~/.local/share/chezmoi/helpers/requirers.sh 
+
+running "installing mas packages"
+
+# mas account &> /dev/null
+# if [[ $? -ne 0 ]]; then
+#   error "Please login to Mac app store first, then run command again"
+#   mas open
+#   exit 0
+# fi
+
+
+{{ range (keys $mas_packages) }}
+require_mas "{{ . }}"
+{{ end }}
