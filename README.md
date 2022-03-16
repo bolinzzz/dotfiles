@@ -6,6 +6,6 @@ Using the Dotfiles
 
 ```$ sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply bolinzzz```
 
-2. Updating the dotfiles on any machine:
+2. Automate the setting up process using the dotfiles:
 
 ```$ chezmoi update``` 
