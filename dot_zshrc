@@ -70,7 +70,7 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm brew macos extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode asdf git-open)
+plugins=(git npm brew macos pipenv extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode asdf git-open)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,4 +102,5 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.sh
 source $HOME/.functions.sh
 
-
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
